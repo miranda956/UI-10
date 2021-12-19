@@ -1,7 +1,7 @@
 <template>
   <div class="tables-basic">
     <h2 class="page-title">Staff <span class="fw-semi-bold"></span></h2>
-       <router-link to="/app/components/createstaff">
+       <router-link to="/app/component/createstaff">
                <button type="button" class="btn btn-primary">New Staff</button>
 
        </router-link>

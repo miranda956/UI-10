@@ -22,14 +22,7 @@
             index="dashboard"
             isHeader
         />
-        <NavLink
-            :activeItem="activeItem"
-            header="Products"
-            link="/app/typography"
-            iconName="flaticon-gift"
-            index="typography"
-            isHeader
-        />
+      
         <NavLink
             :activeItem="activeItem"
             header="Shops"
@@ -46,7 +39,18 @@
             index="notifications"
             isHeader
         />
-      
+       <NavLink
+            :activeItem="activeItem"
+            header="Catalog"
+            link="/app/catalog"
+            iconName="flaticon-gift"
+            index="catalog"
+            :childrenLinks="[
+              { header: 'Products', link: '/app/catalog/products' },
+              { header: 'Categories', link: '/app/catalog/category' },
+
+            ]"
+        />
       
           <NavLink
             :activeItem="activeItem"
@@ -58,42 +62,71 @@
               { header: 'Analytics', link: '/app/components/charts' },
             ]"
         />
+       
         <NavLink
             :activeItem="activeItem"
             header="User Management"
-            link="/app/components"
+            link="/app/component"
             iconName="flaticon-users"
-            index="components"
+            index="component"
             :childrenLinks="[
-              { header: 'Staff', link: '/app/components/staff ' },
-              { header: 'Roles', link: '/app/components/roles' },
-              { header: 'Permissions', link:'/app/components/permission' },
+              { header: 'Staff', link: '/app/component/staff ' },
+              { header: 'Roles', link: '/app/component/roles' },
+              { header: 'Permissions', link:'/app/component/permission' },
             ]"
         />
            <NavLink
             :activeItem="activeItem"
             header="Support Center"
-            link="/app/components"
+            link="/app/support"
             iconName="flaticon-help"
-            index="components"
+            index="support"
             :childrenLinks="[
-              { header: 'Tickets', link: '/app/components/tickets' },
-              { header: 'FAQ', link: '/app/components/faq' },
+              { header: 'Tickets', link: '/app/support/tickets' },
+              { header: 'FAQ', link: '/app/support/faq' },
             ]"
         />
            <NavLink
             :activeItem="activeItem"
             header="InvoiceManagement"
-            link="/app/components"
+            link="/app/invoices"
             iconName="flaticon-briefcase"
-            index="components"
+            index="invoices"
             :childrenLinks="[
-              { header: 'Invoices', link: '/app/components/invoices' },
-              { header: ' GenerateInvoices', link: '/app/components/craeteinvoice' }
+              { header: 'Invoices', link: '/app/invoices/invoices' },
+              { header: ' GenerateInvoices', link: '/app/invoices/craeteinvoice' }
 
              
             ]"
         />
+         
+           <NavLink
+            :activeItem="activeItem"
+            header="LeadManagement"
+            link="/app/leads"
+            iconName="flaticon-spotlight"
+            index="leads"
+            :childrenLinks="[
+              { header: 'Leads', link: '/app/leads/leads' },
+              { header: ' Opportunity', link: '/app/leads/opportunity' },
+
+             
+            ]"
+        />
+         <NavLink
+            :activeItem="activeItem"
+            header="ContactManagement"
+            link="/app/contacts"
+            iconName="flaticon-user-3"
+            index="contacts"
+            :childrenLinks="[
+              { header: 'Message', link: '/app/contacts/messages' },
+               { header: 'Contacts', link: '/app/contacts/contacts' },
+
+             
+            ]"
+        />
+       
       </ul>
       
     

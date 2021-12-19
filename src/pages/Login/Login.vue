@@ -15,10 +15,10 @@
             {{errorMessage}}
           </b-alert>
           <div class="form-group">
-            <input class="form-control no-border" ref="email" required type="email" name="email" placeholder="Email" />
+            <input class="form-control no-border"  required type="email" name="email" placeholder="Email" />
           </div>
           <div class="form-group">
-            <input class="form-control no-border" ref="password" required type="password" name="password" placeholder="Password" />
+            <input class="form-control no-border" required type="password" name="password" placeholder="Password" />
           </div>
           <b-button type="submit" size="sm" class="auth-btn mb-3" variant="inverse">Login</b-button>
        
@@ -45,10 +45,10 @@ export default {
   },
   methods: {
     login() {
-      const email = "admin";
+      const email = "admin@makiti";
       const password = "admin";
-
-      if (email.length !== 0 && password.length !== 0) {
+ 
+      if (email== email && password== password) {
         window.localStorage.setItem('authenticated', true);
         this.$router.push('/app/dashboard');
       }

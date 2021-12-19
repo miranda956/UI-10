@@ -24,10 +24,21 @@ import NewShop  from '@/pages/Tables/NewShop';
 import Tickets from '@/pages/supportCenter/tickets'
 import IconsPage from '@/pages/Icons/Icons';
 import NotificationsPage from '@/pages/Notifications/Notifications';
-import AddProduct from '@/pages/Typography/newProduct'
+import AddProduct from '@/pages/CatalogManagement/addProduct'
+import Product from '@/pages/CatalogManagement/products'
+import Category from '@/pages/CatalogManagement/categories'
+import NewCategory from '@/pages/CatalogManagement/addCategories'
 import Roles from '@/pages/userManagement/Roles'
 import Invoice from '@/pages/InvoiceManagement/Invoices'
 import CreateInvoice from  '@/pages/InvoiceManagement/CreateInvoice';
+import Contacts from '@/pages/ContactManagement/contacts.vue'
+import Messages from '@/pages/ContactManagement/Message.vue';
+import Leads from './pages/LeadManagement/Leads.vue'
+import CreateLead from './pages/LeadManagement/CreateLead.vue'
+import Opportunity from '@/pages/LeadManagement/Opportunity.vue'
+import CreateOpportunity from './pages/LeadManagement/addOpportunity.vue';
+import AddRole from '@/pages/userManagement/adddRole.vue';
+
 Vue.use(Router);
 
 export default new Router({
@@ -73,17 +84,63 @@ export default new Router({
           component: ChartsPage,
         },
         {
-          path: 'components/invoices',
+          path: 'leads/leads',
+          name: 'leads',
+          component:Leads,
+        },
+        {
+          path: 'catalog/products',
+          name: 'products',
+          component:Product,
+        },
+        {
+          path: 'catalog/category',
+          name: 'category',
+          component:Category,
+        },
+        {
+          path: 'catalog/newcategory',
+          name: 'newcategory',
+          component:NewCategory,
+        },
+        {
+          path: 'catalog/newproduct',
+          name: 'addproducts',
+          component:AddProduct,
+        },
+        {
+          path: 'leads/opportunity',
+          name: 'opportunity',
+          component:Opportunity,
+        },
+        {
+          path: 'leads/addopportunity',
+          name: 'createopportunity',
+          component:CreateOpportunity,
+        },
+        {
+          path: 'leads/createleads',
+          name: 'createleads',
+          component: CreateLead,
+        },
+        {
+          path: 'invoices/invoices',
           name: 'Invoice',
           component: Invoice,
         },
+        {
+          path: 'contacts/messages',
+          name: ' Messages',
+          component: Messages,
+        },
+    
          {
-          path: 'components/craeteinvoice',
+          path: 'invoices/craeteinvoice',
           name: 'newInvoice',
           component: CreateInvoice,
         },
         {
-          path: 'components/faq',
+          path: 'support/faq',
           name: 'FAQ',
           component: FAQ,
         },
@@ -92,6 +149,7 @@ export default new Router({
           name: 'TablesBasicPage',
           component: TablesBasicPage,
         },
+        
         {
           path: '/error',
           name: 'Error',
@@ -103,14 +161,19 @@ export default new Router({
           component: GoogleMapPage,
         },
         {
-          path: 'components/staff',
-          name: 'Staff',
-          component: Staff,
+          path: 'component/staff',
+          name: 'staff',
+          component:Staff,
         },
         {
-          path: 'components/tickets',
+          path: 'support/tickets',
           name: 'Tickets',
           component: Tickets,
+        },
+        {
+          path: 'contacts/contacts',
+          name: 'contacts',
+          component: Contacts,
         },
         {
           path: 'components/newproduct',
@@ -118,12 +181,17 @@ export default new Router({
           component: AddProduct,
         },
         {
+          path: 'component/newrole',
+          name: 'addRole',
+          component: AddRole,
+        },
+        {
           path: 'components/newshop',
           name: 'addshop',
           component: NewShop,
         },
         {
-          path: 'components/permission',
+          path: 'component/permission',
           name: 'Permission',
           component:Permission,
         },
@@ -134,12 +202,12 @@ export default new Router({
           component: AddPermission,
         },
         {
-          path: 'components/createstaff',
+          path: 'component/createstaff',
           name: 'createstaff',
           component: CreateStaff,
         },
         {
-          path: 'components/roles',
+          path: 'component/roles',
           name: 'Roles',
           component: Roles,
         },

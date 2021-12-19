@@ -1,15 +1,17 @@
 <template>
   <div class="tables-basic">
-    <h2 class="page-title">ROLES <span class="fw-semi-bold"></span></h2>
-       <router-link to="/app/component/newrole">
-               <button type="button" class="btn btn-primary">ADD ROLE</button>
+    <h2 class="page-title">Opportunity <span class="fw-semi-bold"></span></h2>
+       <router-link to="/app/leads/addopportunity">
+               <button type="button" class="btn btn-primary">NEW OPPORTUNITY</button>
 
        </router-link>
+
+  
 
     <b-row>
       <b-col>
         <Widget
-          title="<h5>Staff <span class='fw-semi-bold'>Lists</span></h5>"
+          title="<h5> Opportunities <span class='fw-semi-bold'>Lists</span></h5>"
           customHeader settings close
         >
         <div class="input-group">
@@ -23,10 +25,11 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th class="hidden-sm-down">#</th>
-                  <th>ROLEID</th>
-                  <th>ROLE NAME</th>
-                  <th class="hidden-sm-down">ASSIGNED USERS</th>
+                  <th class="hidden-sm-down">Opportunity Name</th>
+                  <th>Phone</th>
+                  <th>Email</th>
+                  <th class="hidden-sm-down">AssignedTo</th>
+                  <th class="hidden-sm-down">Status</th>
                   <th class="hidden-sm-down">Actions</th>
 
 

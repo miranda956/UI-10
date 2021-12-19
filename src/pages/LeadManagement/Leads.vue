@@ -1,10 +1,12 @@
 <template>
   <div class="tables-basic">
-    <h2 class="page-title">ROLES <span class="fw-semi-bold"></span></h2>
-       <router-link to="/app/component/newrole">
-               <button type="button" class="btn btn-primary">ADD ROLE</button>
+    <h2 class="page-title">Lead <span class="fw-semi-bold"></span></h2>
+       <router-link to="/app/leads/createleads">
+               <button type="button" class="btn btn-primary">NEW LEAD</button>
 
        </router-link>
+
+  
 
     <b-row>
       <b-col>
@@ -24,9 +26,11 @@
               <thead>
                 <tr>
                   <th class="hidden-sm-down">#</th>
-                  <th>ROLEID</th>
-                  <th>ROLE NAME</th>
-                  <th class="hidden-sm-down">ASSIGNED USERS</th>
+                  <th>Phone</th>
+                  <th>Email</th>
+                  <th class="hidden-sm-down">AssignedTo</th>
+                  <th class="hidden-sm-down">Status</th>
+                 <th class="hidden-sm-down">Source</th>
                   <th class="hidden-sm-down">Actions</th>
 
 

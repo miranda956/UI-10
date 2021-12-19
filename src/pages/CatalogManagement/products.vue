@@ -1,14 +1,15 @@
 <template>
   <div class="tables-basic">
-    <h2 class="page-title">Customers <span class="fw-semi-bold"></span></h2>
-    
+    <h2 class="page-title">Products <span class="fw-semi-bold"></span></h2>
+    <router-link to="/app/catalog/newproduct">  <button type="button" class="btn btn-primary" @click="goToHome()">New Product</button>
+</router-link>
     <b-row>
       <b-col>
         <Widget
-          title="<h5>Customers <span class='fw-semi-bold'>Lists</span></h5>"
+          title="<h5>Products <span class='fw-semi-bold'>Lists</span></h5>"
           customHeader settings close
         >
-            <div class="input-group">
+             <div class="input-group">
   <div class="form-outline">
     <input type="search" id="form1" class="form-control" />
     <label class="form-label" for="form1"></label>
@@ -21,13 +22,12 @@
               <thead>
                 <tr>
                   <th class="hidden-sm-down">#</th>
-                  <th>Customer Name</th>
-                  <th class="hidden-sm-down">Email</th>
-                  <th class="hidden-sm-down">Created Date</th>
-                  <th class="hidden-sm-down">Plan</th>
-                  <th class="hidden-sm-down">Payment Method</th>
-                  <th class="hidden-sm-down">Status</th>
+                  <th>Picture</th>
+                  <th>Title</th>
+                  <th class="hidden-sm-down">Description</th>
+                  <th class="hidden-sm-down">Unused</th>
                   <th class="hidden-sm-down">Location</th>
+                  <th class="hidden-sm-down">Status</th>
                    <th class="hidden-sm-down">Address</th>
                   <th class="hidden-sm-down">Actions</th>
 
@@ -50,3 +50,14 @@
    </b-row>
   </div>
 </template>
+<script>
+export default {
+  setup() {
+    
+  },
+  goToHome(){
+   this.$router.push('/app/components/staff'); 
+      }
+  }
+
+</script>
